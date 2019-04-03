@@ -6,4 +6,6 @@ print(number_list)
 # --------- insertion sort -----------
 print(algo_sort.insertion_sort(number_list))
 print("="*50)
-
+# --------- bubble sort -----------
+print(algo_sort.bubble_sort(number_list))
+print("="*50)
