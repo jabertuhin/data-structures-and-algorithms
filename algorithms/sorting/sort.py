@@ -1,7 +1,7 @@
 from typing import List, Union
 
 
-def insertion_sort(array: List[Union[int, float, str]]) -> List[Union[int, float, str]]:
+def insertion_sort(array: List[Union[int, float]]) -> List[Union[int, float]]:
     print("=====Insertion Sort=====")
 
     for i in range(1, len(array), 1):
@@ -14,7 +14,7 @@ def insertion_sort(array: List[Union[int, float, str]]) -> List[Union[int, float
     return array
 
 
-def bubble_sort(number_array: List[Union[int, float, str]]) -> List[Union[int, float, str]]:
+def bubble_sort(number_array: List[Union[int, float]]) -> List[Union[int, float]]:
     print("=====Bubble Sort=====")
 
     for i in range(0, len(number_array), 1):
