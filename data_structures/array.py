@@ -1,4 +1,7 @@
-def right_shift(array):
+from typing import List, Any
+
+
+def right_shift(array: List[Any]) -> List[Any]:
     """
     Shifts right by one position.
 
