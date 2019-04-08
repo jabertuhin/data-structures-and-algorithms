@@ -33,3 +33,9 @@ class TestRightShift(TestCase):
         b = right_shift(a[:])
 
         self.assertListEqual([a[-1]] + a[0:-1], b)
+
+    def test_large_array(self):
+        a = [i for i in range(1, 1000, 3)]
+        b = right_shift(a[:])
+
+        self.assertListEqual([a[-1]] + a[0:-1], b)
