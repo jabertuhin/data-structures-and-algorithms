@@ -2,43 +2,44 @@
 This code was a part of a Udacity course[DS and Algorithms in python] Quiz.
 """
 
+
 class Queue:
     def __init__(self, head=None):
         self.storage = [head]
 
     def enqueue(self, new_element):
+        """"
+        This method inserts object in the queue.
+        """
         self.storage.append(new_element)
 
     def peek(self):
+        """"
+        This method returns the first object inserted in the queue.
+        :return: object that was inserted in the queue.
+        """
         return self.storage[0]
 
     def dequeue(self):
-        try:            
-            return self.storage.pop(0)        
-        except:
-            return "Queue is empty."
-    
-# Setup
-q = Queue(1)
-q.enqueue(2)
-q.enqueue(3)
+        """"
+        This method returns the peek value of the queue and also removes it from queue.
+        :return: object that was inserted in the queue.
+        """
+        return self.storage.pop(0)
 
-# Test peek
-# Should be 1
-print(q.peek())
+    def size(self):
+        """"
+        This method returns the number of elements present in the queue.
+        :return: numerical value(int type).
+        """
+        return len(self.storage)
 
-# Test dequeue
-# Should be 1
-print(q.dequeue())
-
-# Test enqueue
-q.enqueue(4)
-# Should be 2
-print(q.dequeue())
-# Should be 3
-print(q.dequeue())
-# Should be 4
-print(q.dequeue())
-q.enqueue(5)
-# Should be 5
-print(q.peek())
+    def empty(self):
+        """"
+        This method returns True if the queue is empty or False otherwise.
+        :return: boolean value
+        """
+        if len(self.storage) > 0:
+            return False
+        else:
+            return True
