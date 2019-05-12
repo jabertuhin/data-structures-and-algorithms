@@ -8,6 +8,9 @@ class Queue:
         self.storage = [head] if head is not None else []  # no need to insert when head is None
 
     def enqueue(self, new_element):
+        """"
+        This method inserts object in the queue.
+        """
         self.storage.append(new_element)
 
     def peek(self):
